@@ -44,7 +44,7 @@
 </head>
 
 <body>
-    <header></header>
+    <header style="background-image:url({brand:logo})"></header>
 	<div class="navbar navbar-inverse navbar-fixed-top header" role="navigation" id="header-menu">
 		<div class="container">
 			<!-- IMPORT partials/menu.tpl -->
@@ -53,12 +53,12 @@
 
 	<input id="csrf_token" type="hidden" template-variable="csrf" value="{csrf}" />
 
-	<div class="container" id="content">
-
-	    <!-- IMPORT partials/noscript/warning.tpl -->
+    <div class="container">
         <div class="row home">
-            <!-- IMPORT partials/home_menu.tpl -->
-        </div>
-        <div class="row home"  widget-area="slider">
+                    <!-- IMPORT partials/home_menu.tpl -->
+                </div>
 
-        </div>
+    </div>
+
+
+	<div class="container" id="content">

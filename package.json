@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-draenor",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "warcraft Dranor theme for NodeBB",
   "main": "theme.less",
   "repository": {
@@ -29,8 +29,8 @@
   "readme": "nodebb-theme-draenor\r\n====================\r\n\r\nWarcraft theme for team Ginkgo Biloba based on vanilla theme nodeBB.\r\n",
   "readmeFilename": "README.md",
   "homepage": "https://github.com/NodeBB/nodebb-theme-draenor",
-  "_id": "nodebb-theme-draenor@0.0.1",
+  "_id": "nodebb-theme-draenor@0.0.3",
   "_shasum": "ee694024147645409f139c5b246e16be12eb3d51",
-  "_from": "nodebb-theme-draenor@~0.0.1",
+  "_from": "nodebb-theme-draenor@~0.0.3",
   "_resolved": "https://registry.npmjs.org/nodebb-theme-draenor/-/nodebb-theme-draenor-0.0.1.tgz"
 }

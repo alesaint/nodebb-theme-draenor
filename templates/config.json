@@ -1,6 +1,7 @@
 {
 	"custom_mapping": {
-		"^\/?$": "home",
+		"^\/?$": "news-layout",
+        "^home?$": "home",
 		"^admin?$": "admin/index",
 		"^users/sort-posts": "users",
 		"^users/latest": "users",
