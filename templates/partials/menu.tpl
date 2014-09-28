@@ -65,7 +65,7 @@
 					<!-- ENDIF searchEnabled -->
 					<!-- BEGIN navigation -->
 					<li class="{navigation.class}">
-						<a href="{relative_path}{navigation.route}" title="{navigation.title}">
+						<a href="{relative_path}{navigation.route}" title="{navigation.text}">
 							<!-- IF navigation.iconClass -->
 							<i class="fa fa-fw {navigation.iconClass}"></i>
 							<!-- ENDIF navigation.iconClass -->

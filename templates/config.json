@@ -1,7 +1,9 @@
 {
 	"custom_mapping": {
-		"^\/?$": "news-layout",
+		"^\/?$": "home",
         "^home?$": "home",
+        "^actu?$": "news-layout",
+        "^videos?$": "videos-layout",
 		"^admin?$": "admin/index",
 		"^users/sort-posts": "users",
 		"^users/latest": "users",
