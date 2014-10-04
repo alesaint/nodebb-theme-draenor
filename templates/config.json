@@ -1,6 +1,6 @@
 {
 	"custom_mapping": {
-		"^\/?$": "home",
+		"^\/?$": "news-layout",
         "^home?$": "home",
         "^actu?$": "news-layout",
         "^videos?$": "videos-layout",
