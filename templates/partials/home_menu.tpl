@@ -7,7 +7,7 @@
         </li>
 
         <li>
-            <a href="/">
+            <a href="/Categories">
                FORUM
             </a>
         </li>
