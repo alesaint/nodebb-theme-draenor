@@ -7,7 +7,7 @@
         </li>
 
         <li>
-            <a href="/forum">
+            <a href="/">
                FORUM
             </a>
         </li>

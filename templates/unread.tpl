@@ -1,15 +1,12 @@
 <div class="unread">
-	<ol class="breadcrumb">
-		<li><a href="{relative_path}/">[[global:home]]</a></li>
-		<li class="active">[[unread:title]]</li>
-	</ol>
 
+	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-	<div id="category-no-topics" class="alert alert-warning {no_topics_message}">
+	<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">
 		<strong>[[unread:no_unread_topics]]</strong>
 	</div>
 
-	<div class="markread btn-group {show_markread_button}">
+	<div class="markread btn-group <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
 		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 			[[unread:mark_as_read]] <span class="caret"></span>
 		</button>
@@ -26,12 +23,9 @@
 		</ul>
 	</div>
 
-
-
-	<a href="{relative_path}/unread">
+	<a href="{config.relative_path}/unread">
 		<div class="alert alert-warning hide" id="new-topics-alert"></div>
 	</a>
-
 
 	<div class="category row">
 		<div class="col-md-12">

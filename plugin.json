@@ -2,15 +2,15 @@
 	"id": "nodebb-theme-draenor",
 	"library": "./lib/theme.js",
 	"hooks": [
-		{
-            "hook": "action:app.load", "method": "init"
-        },
-        {
-            "hook": "filter:widgets.getAreas",
-            "method": "defineWidgetAreas",
-            "callbacked": true
-        }
+      {
+        "hook": "action:app.load", "method": "init"
+      },{
+        "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
+      }
 	],
+    "scripts": [
+      "lib/draenor.js"
+    ],
     "staticDirs": {
         "public": "./public"
     }

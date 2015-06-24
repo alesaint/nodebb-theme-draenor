@@ -10,9 +10,6 @@
 	<!-- BEGIN linkTags -->
 	<link<!-- IF linkTags.link --> link="{linkTags.link}"<!-- ENDIF linkTags.link --><!-- IF linkTags.rel --> rel="{linkTags.rel}"<!-- ENDIF linkTags.rel --><!-- IF linkTags.type --> type="{linkTags.type}"<!-- ENDIF linkTags.type --><!-- IF linkTags.href --> href="{linkTags.href}"<!-- ENDIF linkTags.href --> />
 	<!-- END linkTags -->
-	<!-- IF useCustomCSS -->
-	<style type="text/css">{customCSS}</style>
-	<!-- ENDIF useCustomCSS -->
 
 	<!--[if lt IE 9]>
   		<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.3.0/es5-shim.min.js"></script>
@@ -23,26 +20,21 @@
 
 	<script>
 		var RELATIVE_PATH = "{relative_path}";
+		var config = JSON.parse('{{configJSON}}');
+		var app = {
+			template: "{template.name}",
+			user: JSON.parse('{{userJSON}}')
+		};
 	</script>
-	<script src="{relative_path}/socket.io/socket.io.js"></script>
 	<script src="{relative_path}/nodebb.min.js?{script-buster}"></script>
-	<script>
-		require.config({
-			baseUrl: "{relative_path}/src/modules",
-			waitSeconds: 3,
-			urlArgs: "{cache-buster}",
-			paths: {
-				'forum': '../forum',
-				'vendor': '../../vendor',
-				'buzz': '../../vendor/buzz/buzz.min'
-			}
-		});
-	</script>
+	<!-- IMPORT partials/requirejs-config.tpl -->
 	<!-- IF useCustomJS -->
-	{customJS}
+	{{customJS}}
 	<!-- ENDIF useCustomJS -->
+	<!-- IF useCustomCSS -->
+	<style type="text/css">{{customCSS}}</style>
+	<!-- ENDIF useCustomCSS -->
 </head>
-
 <body>
     <header style="background-image:url({brand:logo})"></header>
 	<div class="navbar navbar-inverse navbar-fixed-top header" role="navigation" id="header-menu">

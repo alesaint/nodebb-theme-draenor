@@ -1,16 +1,14 @@
-<ol class="breadcrumb">
-	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<a href="{relative_path}/" itemprop="url"><span itemprop="title">[[global:home]]</span></a>
-	</li>
-	<li class="active" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<span itemprop="title">[[register:register]]</span>
-	</li>
-</ol>
+<!-- IMPORT partials/breadcrumbs.tpl -->
 
 <div class="row">
 	<div class="{register_window:spansize}">
 		<div class="well well-lg">
-			<form class="form-horizontal" role="form" action="{relative_path}/register" method="post">
+			<div class="alert alert-danger" id="register-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>[[error:registration-error]]</strong>
+				<p>{error}</p>
+			</div>
+			<form class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 				<div class="form-group">
 					<label for="email" class="col-lg-4 control-label">[[register:email_address]]</label>
 					<div class="col-lg-8">
@@ -27,7 +25,7 @@
 					<label for="username" class="col-lg-4 control-label">[[register:username]]</label>
 					<div class="col-lg-8">
 						<div class="input-group">
-							<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" />
+							<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
 							<span class="input-group-addon">
 								<span id="username-notify"><i class="fa fa-circle-o"></i></span>
 							</span>
@@ -63,7 +61,7 @@
 				<div class="form-group">
 					<label for="register-{regFormEntry.styleName}" class="col-lg-4 control-label">{regFormEntry.label}</label>
 					<div id="register-{regFormEntry.styleName}" class="col-lg-8">
-						{regFormEntry.html}
+						{{regFormEntry.html}}
 					</div>
 				</div>
 				<!-- END regFormEntry -->
@@ -89,7 +87,6 @@
 						<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
 					</div>
 				</div>
-				<input type="hidden" name="_csrf" value="{token}" />
 				<input id="referrer" type="hidden" name="referrer" value="" />
 			</form>
 		</div>
@@ -101,7 +98,7 @@
 			<h4>[[register:alternative_registration]]</h4>
 			<ul class="alt-logins">
 				<!-- BEGIN authentication -->
-				<li class="{authentication.name}"><a rel="nofollow" href="{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></li>
+				<li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></li>
 				<!-- END authentication -->
 			</ul>
 		</div>

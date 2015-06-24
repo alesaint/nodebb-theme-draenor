@@ -3,7 +3,5 @@
     "name": "NodeBB Draenor",
     "description": "Warcraft Theme for NodeBB",
     "url": "https://github.com/NodeBB/nodebb-theme-draenor",
-    "screenshot": "screenshot.png",
-    "templates": "templates",
-    "staticDir": "static"
+    "screenshot": "screenshot.png"
 }
