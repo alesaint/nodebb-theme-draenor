@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-draenor",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "warcraft Dranor theme for NodeBB",
   "main": "theme.less",
   "repository": {
