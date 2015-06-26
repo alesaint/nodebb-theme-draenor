@@ -42,9 +42,6 @@
 			<!-- IMPORT partials/menu.tpl -->
 		</div>
 	</div>
-
-	<input id="csrf_token" type="hidden" template-variable="csrf" value="{csrf}" />
-
     <div class="container">
         <div class="row home">
                     <!-- IMPORT partials/home_menu.tpl -->
@@ -53,4 +50,5 @@
     </div>
 
 
-	<div class="container" id="content">
+	<div class="container" id="content" component="content">
+	<!-- IMPORT partials/noscript/warning.tpl -->
